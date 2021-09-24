@@ -1,13 +1,19 @@
-def main(n, ar):
-    idx = dict()
+def main(n, pairs):
+    mapPairs = dict()
 
-    for i in ar:
-        if i in idx:
-            idx[i] += 1
+    for i in pairs:
+        if i in mapPairs:
+            mapPairs[i] += 1
         else: 
-            idx[i] = 1
+            mapPairs[i] = 1
 
-    print (idx)
+    print (mapPairs)
+
+    contador = 0
+    for i in mapPairs:
+        contador += int(mapPairs[i]/2)
+
+    print (contador)
 
 if __name__ == "__main__":
     n = 6
